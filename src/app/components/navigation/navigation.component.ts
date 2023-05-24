@@ -24,7 +24,7 @@ export class NavigationComponent {
       const modifiedName = componentName.replace(/ /g, '-').toLowerCase();
   
       // Append "-view" at the end
-      const href = modifiedName + '-view';
+      const href = modifiedName;
   
       return href;
     }

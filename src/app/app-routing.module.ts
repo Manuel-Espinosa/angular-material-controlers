@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { componentNames } from './utils/component.names';
-
+import { BadgeViewComponent } from './components/badge/badge-view/badge-view.component';
+import { AutocompleteViewComponent } from './components/autocomplete/autocomplete-view/autocomplete-view.component';
 const routes: Routes = [
-  ...componentNames.map((componentName: string) => ({
-    path: generateHref(componentName),
-    component: generateComponentName(componentName),
-  })),
+  { path: 'badge', component:BadgeViewComponent},
+  { path: 'autocomplete', component:AutocompleteViewComponent},
+
 ];
 
 @NgModule({
@@ -14,18 +13,3 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-
-// Helper function to generate the href
-function generateHref(componentName: string): string {
-  const modifiedName = componentName.replace(/ /g, '-').toLowerCase();
-  return modifiedName + '-view';
-}
-
-// Helper function to generate the component name in camelCase with 'View' appended
-function generateComponentName(componentName: string): any {
-  const modifiedName = componentName.replace(/ /g, '');
-  modifiedName + 'ViewComponent';
-  import(`./components/components-views/${modifiedName}`).then(
-    (module) => module[modifiedName]
-  );
-}

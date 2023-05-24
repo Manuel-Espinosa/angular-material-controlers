@@ -34,3 +34,4 @@ ng g c components/components-views/tabs-view
 ng g c components/components-views/toolbar-view
 ng g c components/components-views/tooltip-view
 ng g c components/components-views/tree-view
+echo 'FINISHED'
