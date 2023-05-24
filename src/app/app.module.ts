@@ -15,6 +15,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { BadgeViewComponent } from './components/badge/badge-view/badge-view.component';
 import { AutocompleteViewComponent } from './components/autocomplete/autocomplete-view/autocomplete-view.component';
+import { BottomSheetViewComponent } from './components/bottom-sheet/bottom-sheet-view/bottom-sheet-view.component';
+import { ButtonViewComponent } from './components/button/button-view/button-view.component';
 
 
 
@@ -26,6 +28,8 @@ import { AutocompleteViewComponent } from './components/autocomplete/autocomplet
   ],
   imports: [
     AutocompleteViewComponent,
+    BottomSheetViewComponent,
+    ButtonViewComponent,
     BrowserModule,
     BadgeViewComponent,
     AppRoutingModule,

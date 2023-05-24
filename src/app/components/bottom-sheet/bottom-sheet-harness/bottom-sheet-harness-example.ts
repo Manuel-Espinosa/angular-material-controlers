@@ -15,7 +15,7 @@ import {
   imports: [MatBottomSheetModule],
 })
 export class BottomSheetHarnessExample {
-  @ViewChild(TemplateRef) template: TemplateRef<any>;
+  @ViewChild(TemplateRef) template!: TemplateRef<any>;
 
   constructor(readonly bottomSheet: MatBottomSheet) {}
 
