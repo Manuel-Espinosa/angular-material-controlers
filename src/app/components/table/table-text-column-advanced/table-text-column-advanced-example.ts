@@ -36,7 +36,7 @@ export class TableTextColumnAdvancedExample {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
-  headerText: string;
+  headerText!: string;
 
   decimalPipe = new DecimalPipe('en-US');
 

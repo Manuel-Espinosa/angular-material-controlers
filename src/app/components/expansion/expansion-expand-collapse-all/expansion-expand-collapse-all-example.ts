@@ -26,5 +26,5 @@ import {MatNativeDateModule} from '@angular/material/core';
   ],
 })
 export class ExpansionExpandCollapseAllExample {
-  @ViewChild(MatAccordion) accordion: MatAccordion;
+  @ViewChild(MatAccordion) accordion!: MatAccordion;
 }

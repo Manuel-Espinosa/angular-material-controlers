@@ -11,7 +11,7 @@ import {MatDialog, MatDialogConfig, MatDialogModule} from '@angular/material/dia
   imports: [MatDialogModule],
 })
 export class DialogHarnessExample {
-  @ViewChild(TemplateRef) dialogTemplate: TemplateRef<any>;
+  @ViewChild(TemplateRef) dialogTemplate!: TemplateRef<any>;
 
   constructor(readonly dialog: MatDialog) {}
 

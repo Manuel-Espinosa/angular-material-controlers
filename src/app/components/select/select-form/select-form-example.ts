@@ -25,8 +25,8 @@ interface Car {
   imports: [FormsModule, MatFormFieldModule, MatSelectModule, NgFor, MatInputModule],
 })
 export class SelectFormExample {
-  selectedValue: string;
-  selectedCar: string;
+  selectedValue!: string;
+  selectedCar!: string;
 
   foods: Food[] = [
     {value: 'steak-0', viewValue: 'Steak'},

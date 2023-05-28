@@ -12,7 +12,7 @@ import {MatButtonModule} from '@angular/material/button';
   imports: [MatButtonModule, MatMenuModule, MatDialogModule],
 })
 export class DialogFromMenuExample {
-  @ViewChild('menuTrigger') menuTrigger: MatMenuTrigger;
+  @ViewChild('menuTrigger') menuTrigger!: MatMenuTrigger;
 
   constructor(public dialog: MatDialog) {}
 

@@ -70,9 +70,9 @@ export class MyTel {
 })
 export class MyTelInput implements ControlValueAccessor, MatFormFieldControl<MyTel>, OnDestroy {
   static nextId = 0;
-  @ViewChild('area') areaInput: HTMLInputElement;
-  @ViewChild('exchange') exchangeInput: HTMLInputElement;
-  @ViewChild('subscriber') subscriberInput: HTMLInputElement;
+  @ViewChild('area') areaInput!: HTMLInputElement;
+  @ViewChild('exchange') exchangeInput!: HTMLInputElement;
+  @ViewChild('subscriber') subscriberInput!: HTMLInputElement;
 
   parts: FormGroup<{
     area: FormControl<string | null>;
@@ -99,7 +99,7 @@ export class MyTelInput implements ControlValueAccessor, MatFormFieldControl<MyT
     return this.focused || !this.empty;
   }
 
-  @Input('aria-describedby') userAriaDescribedBy: string;
+  @Input('aria-describedby') userAriaDescribedBy!: string;
 
   @Input()
   get placeholder(): string {
@@ -109,7 +109,7 @@ export class MyTelInput implements ControlValueAccessor, MatFormFieldControl<MyT
     this._placeholder = value;
     this.stateChanges.next();
   }
-  private _placeholder: string;
+  private _placeholder!: string;
 
   @Input()
   get required(): boolean {

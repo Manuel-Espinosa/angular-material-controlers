@@ -37,7 +37,7 @@ export class TableSortingExample implements AfterViewInit {
 
   constructor(private _liveAnnouncer: LiveAnnouncer) {}
 
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatSort) sort!: MatSort;
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;

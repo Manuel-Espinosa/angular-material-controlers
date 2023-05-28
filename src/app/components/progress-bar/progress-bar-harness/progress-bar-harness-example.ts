@@ -11,5 +11,5 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
   imports: [MatProgressBarModule],
 })
 export class ProgressBarHarnessExample {
-  value: number;
+  value!: number;
 }

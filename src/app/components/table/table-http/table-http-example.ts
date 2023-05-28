@@ -27,15 +27,15 @@ import {NgIf, DatePipe} from '@angular/common';
 })
 export class TableHttpExample implements AfterViewInit {
   displayedColumns: string[] = ['created', 'state', 'number', 'title'];
-  exampleDatabase: ExampleHttpDatabase | null;
+  exampleDatabase!: ExampleHttpDatabase | null;
   data: GithubIssue[] = [];
 
   resultsLength = 0;
   isLoadingResults = true;
   isRateLimitReached = false;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
 
   constructor(private _httpClient: HttpClient) {}
 

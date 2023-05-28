@@ -12,7 +12,7 @@ import {NgIf} from '@angular/common';
   imports: [NgIf, MatSidenavModule, MatButtonModule],
 })
 export class SidenavDisableCloseExample {
-  @ViewChild('sidenav') sidenav: MatSidenav;
+  @ViewChild('sidenav') sidenav!: MatSidenav;
 
   reason = '';
 

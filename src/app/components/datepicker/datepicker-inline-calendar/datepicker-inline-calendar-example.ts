@@ -12,5 +12,5 @@ import {MatNativeDateModule} from '@angular/material/core';
   imports: [MatCardModule, MatDatepickerModule, MatNativeDateModule],
 })
 export class DatepickerInlineCalendarExample {
-  selected: Date | null;
+  selected!: Date | null;
 }

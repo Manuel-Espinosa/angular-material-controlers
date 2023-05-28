@@ -56,7 +56,7 @@ export class TableWrappedExample implements AfterViewInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
-  @ViewChild('sort') sort: MatSort;
+  @ViewChild('sort') sort!: MatSort;
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
@@ -89,16 +89,16 @@ export class TableWrappedExample implements AfterViewInit {
   imports: [MatTableModule, MatSortModule],
 })
 export class WrapperTable<T> implements AfterContentInit {
-  @ContentChildren(MatHeaderRowDef) headerRowDefs: QueryList<MatHeaderRowDef>;
-  @ContentChildren(MatRowDef) rowDefs: QueryList<MatRowDef<T>>;
-  @ContentChildren(MatColumnDef) columnDefs: QueryList<MatColumnDef>;
-  @ContentChild(MatNoDataRow) noDataRow: MatNoDataRow;
+  @ContentChildren(MatHeaderRowDef) headerRowDefs!: QueryList<MatHeaderRowDef>;
+  @ContentChildren(MatRowDef) rowDefs!: QueryList<MatRowDef<T>>;
+  @ContentChildren(MatColumnDef) columnDefs!: QueryList<MatColumnDef>;
+  @ContentChild(MatNoDataRow) noDataRow!: MatNoDataRow;
 
-  @ViewChild(MatTable, {static: true}) table: MatTable<T>;
+  @ViewChild(MatTable, {static: true}) table!: MatTable<T>;
 
-  @Input() columns: string[];
+  @Input() columns!: string[];
 
-  @Input() dataSource: DataSource<T>;
+  @Input() dataSource!: DataSource<T>;
 
   ngAfterContentInit() {
     this.columnDefs.forEach(columnDef => this.table.addColumnDef(columnDef));

@@ -2,7 +2,10 @@ import {Component} from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatChipsModule} from '@angular/material/chips';
 
+declare const jasmine: any;
+
 /**
+ * 
  * @title Testing with MatChipsHarness
  */
 @Component({

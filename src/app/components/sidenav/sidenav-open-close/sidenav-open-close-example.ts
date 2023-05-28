@@ -15,7 +15,7 @@ import {NgIf, NgFor} from '@angular/common';
 })
 export class SidenavOpenCloseExample {
   events: string[] = [];
-  opened: boolean;
+  opened!: boolean;
 
   shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
 }

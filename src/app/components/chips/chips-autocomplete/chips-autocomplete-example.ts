@@ -35,7 +35,7 @@ export class ChipsAutocompleteExample {
   fruits: string[] = ['Lemon'];
   allFruits: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
 
-  @ViewChild('fruitInput') fruitInput: ElementRef<HTMLInputElement>;
+  @ViewChild('fruitInput') fruitInput!: ElementRef<HTMLInputElement>;
 
   constructor() {
     this.filteredFruits = this.fruitCtrl.valueChanges.pipe(

@@ -14,6 +14,6 @@ import {MatRadioModule} from '@angular/material/radio';
   imports: [MatRadioModule, FormsModule, NgFor],
 })
 export class RadioNgModelExample {
-  favoriteSeason: string;
+  favoriteSeason!: string;
   seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
 }

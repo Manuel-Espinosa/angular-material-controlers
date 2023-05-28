@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { DatepickerViewComponent } from './datepicker-view.component';
+
+describe('DatepickerViewComponent', () => {
+  let component: DatepickerViewComponent;
+  let fixture: ComponentFixture<DatepickerViewComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [DatepickerViewComponent]
+    });
+    fixture = TestBed.createComponent(DatepickerViewComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

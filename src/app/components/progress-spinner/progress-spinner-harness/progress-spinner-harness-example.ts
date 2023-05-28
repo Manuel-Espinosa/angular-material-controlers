@@ -11,5 +11,5 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
   imports: [MatProgressSpinnerModule],
 })
 export class ProgressSpinnerHarnessExample {
-  value: number;
+  value!: number;
 }

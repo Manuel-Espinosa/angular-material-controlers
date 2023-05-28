@@ -36,7 +36,7 @@ export class TableDynamicArrayDataExample {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = [...ELEMENT_DATA];
 
-  @ViewChild(MatTable) table: MatTable<PeriodicElement>;
+  @ViewChild(MatTable) table!: MatTable<PeriodicElement>;
 
   addData() {
     const randomElementIndex = Math.floor(Math.random() * ELEMENT_DATA.length);
